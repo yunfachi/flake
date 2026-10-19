@@ -1,5 +1,0 @@
-disabled = [
-  "manual_inherit",
-  "manual_inherit_from",
-  "empty_list_concat"
-]
