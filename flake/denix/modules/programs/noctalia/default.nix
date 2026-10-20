@@ -163,7 +163,7 @@
                     ];
                     community_ids = [
                       "feishin"
-                      "pywalfox-beta4"
+                      "pywalfox"
                       "ungoogled-chromium"
                       "prismlauncher"
                       "steam"
