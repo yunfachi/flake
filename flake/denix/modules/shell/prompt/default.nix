@@ -17,7 +17,7 @@
               add_newline = true;
               scan_timeout = 10;
 
-              format = lib.concatStrings [
+              format = builtins.concatStringsSep "" [
                 "$username"
                 "$hostname"
                 "$battery"
