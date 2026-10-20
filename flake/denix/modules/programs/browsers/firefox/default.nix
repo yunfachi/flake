@@ -5,7 +5,7 @@
 {
   denix.modules."programs.browsers.firefox" = { myconfig, ... }: {
     options = with delib; {
-      enable = boolOption myconfig.browsers.enable;
+      enable = boolOption myconfig.programs.browsers.enable;
     };
 
     myconfig.ifEnabled.persist.directories = [

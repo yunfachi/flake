@@ -20,7 +20,7 @@
       package =
         packageOption
           (self.packages.${pkgs.stdenv.hostPlatform.system}.helix.configuration.apply (
-            lib.optionalAttrs myconfig.noctalia.enable {
+            lib.optionalAttrs myconfig.programs.noctalia.enable {
               settings = {
                 theme = lib.mkForce "noctalia";
               };
