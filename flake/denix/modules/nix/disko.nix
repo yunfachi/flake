@@ -24,7 +24,7 @@
         };
       };
 
-      nixos.ifEnabled = lib.mkIf cfg.configureDisko {
+      nixos.always = lib.mkIf cfg.configureDisko {
         fileSystems."/nix".neededForBoot = true;
       };
     };
