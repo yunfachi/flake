@@ -9,7 +9,7 @@
     options = with delib; {
       enable = boolOption host.cliFeatured;
       signing = {
-        enable = boolOption (host.isDesktop && cfg.signingKey != null);
+        enable = boolOption (host.isDesktop && cfg.signing.key != null);
         key = allowNull (strOption null);
       };
     };
