@@ -67,7 +67,17 @@
         "Mod+S".spawn-sh = "noctalia msg screenshot-fullscreen";
         "Mod+A".spawn-sh = "noctalia msg panel-toggle launcher";
         "Mod+L".spawn-sh = "noctalia msg session lock";
-      };
+      }
+      // builtins.listToAttrs (
+        builtins.genList (n: {
+          name = "Mod+${toString (lib.mod (n + 1) 10)}";
+          value.focus-workspace = n+1;
+        }) 10
+        ++ builtins.genList (n: {
+          name = "Mod+Shift+${toString (lib.mod (n + 1) 10)}";
+          value.move-window-to-workspace = n+1;
+        }) 10
+      );
     };
   };
 }
