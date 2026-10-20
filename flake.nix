@@ -81,7 +81,6 @@
 
     nixsecauditor.url = "github:unnamed-systems/nixsecauditor";
     nixsecauditor.inputs.nixpkgs.follows = "nixpkgs";
-    nixsecauditor.inputs.flake-parts.follows = "flake-parts";
     # keep-sorted end
   };
 
