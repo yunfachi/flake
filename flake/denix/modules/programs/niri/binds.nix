@@ -3,7 +3,7 @@
     myconfig.always = {
       programs.niri.settings.binds = {
         "Mod+Return" = {
-          spawn = lib.getExe myconfig.terminal.package;
+          spawn = lib.getExe myconfig.programs.terminal.package;
           _props.repeat = false;
         };
         "Mod+Q" = {
