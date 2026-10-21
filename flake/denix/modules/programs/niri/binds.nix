@@ -71,11 +71,11 @@
       // builtins.listToAttrs (
         builtins.genList (n: {
           name = "Mod+${toString (lib.mod (n + 1) 10)}";
-          value.focus-workspace = n+1;
+          value.focus-workspace = n + 1;
         }) 10
         ++ builtins.genList (n: {
           name = "Mod+Shift+${toString (lib.mod (n + 1) 10)}";
-          value.move-window-to-workspace = n+1;
+          value.move-window-to-workspace = n + 1;
         }) 10
       );
     };
