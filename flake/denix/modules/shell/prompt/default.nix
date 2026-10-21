@@ -86,12 +86,16 @@
           }).wrapper;
     };
 
-    nixos.ifEnabled = {
-      programs.bash.promptInit = ''
-        if [[ $TERM != "dumb" ]]; then
-          eval -- "$(${cfg.package}/bin/starship init bash --print-full-init)"
-        fi
-      '';
+    nixos.ifEnabled = { lib, ... }: {
+      programs.bash.promptInit =
+        let
+          escape = d: lib.escape [ "/" ] (toString d);
+        in
+        ''
+          if [[ $TERM != "dumb" ]]; then
+            eval -- "$(${cfg.package}/bin/starship init bash --print-full-init | sed 's/${escape cfg.package.configuration.package}/${escape cfg.package}/g')"
+          fi
+        '';
     };
   };
 }
