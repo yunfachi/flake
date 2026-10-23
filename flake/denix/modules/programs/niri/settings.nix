@@ -26,6 +26,13 @@
             _props.max-scroll-amount = "95%";
           };
           workspace-auto-back-and-forth = [ ];
+
+          keyboard = {
+            xkb = {
+              layout = "us,ru";
+              options = "grp:win_space_toggle";
+            };
+          };
         };
 
         layout = {
