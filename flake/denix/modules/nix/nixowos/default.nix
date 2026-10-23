@@ -10,9 +10,7 @@
       enable = boolOption host.isDesktop;
     };
 
-    nixos.always = {
-      imports = inputs.nixowos.nixosModules.default.imports;
-    };
+    nixos.always = [ inputs.nixowos.nixosModules.default ];
 
     nixos.ifEnabled = {
       nixowos.enable = true;

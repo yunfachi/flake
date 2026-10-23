@@ -76,8 +76,6 @@
 
     nixowos.url = "github:yunfachi/nixowos";
     nixowos.inputs.nixpkgs.follows = "nixpkgs";
-    nixowos.inputs.flake-parts.follows = "flake-parts";
-    nixowos.inputs.denix.follows = "denix";
 
     nixsecauditor.url = "github:unnamed-systems/nixsecauditor";
     nixsecauditor.inputs.nixpkgs.follows = "nixpkgs";
