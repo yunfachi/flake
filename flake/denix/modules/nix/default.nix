@@ -33,6 +33,10 @@
             warn-dirty = false;
             log-lines = 50;
             # secret-key-files = TODO;
+
+            connect-timeout = 5;
+            stalled-download-timeout = 10;
+            download-buffer-size = 128 * 1024 * 1024;
           };
 
           channel.enable = false;
