@@ -1,5 +1,6 @@
 {
   delib,
+  host,
   ...
 }:
 {
@@ -11,7 +12,7 @@
     }:
     {
       options = with delib; {
-        enable = boolOption myconfig.programs.codeEditors.enable;
+        enable = boolOption (myconfig.programs.codeEditors.enable && host.cliFeatured);
       };
 
       nixos.ifEnabled = {
