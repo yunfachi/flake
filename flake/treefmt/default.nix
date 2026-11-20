@@ -10,6 +10,7 @@
         nixfmt = {
           enable = true;
           priority = 1;
+          strict = true;
         };
         deadnix = {
           enable = true;
